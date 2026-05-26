@@ -1,27 +1,4 @@
-# Local .terraform directories (contains provider binaries and modules)
-**/.terraform/*
-
-# .tfstate files (contains sensitive infra data and should be in remote storage)
+.terraform/
 *.tfstate
-*.tfstate.*
-
-# Crash log files
-crash.log
-crash.*.log
-
-# Exclude all .tfvars files (likely contain passwords or secrets)
-*.tfvars
-*.tfvars.json
-
-# Ignore override files (used for local testing)
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-
-# Ignore transient lock files
-.terraform.tfstate.lock.info
-
-# Ignore CLI configuration files
-.terraformrc
-terraform.rc
+*.tfstate.backup
+terraform.tfvars
