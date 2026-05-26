@@ -1,15 +1,16 @@
 resource "aws_instance" "terraform" {
     ami = "ami-0236922087fa98b6e"
-    instance_type= var.environment == "dev" ? "t3.micro" : "t3.medium"
+    instance_type = var.environment == "dev" ? "t3.micro" : "t3.medium"
+    subnet_id = "subnet-0f3560bfdb9b5630d"
     vpc_security_group_ids = [aws_security_group.allow_all.id]
     tags = {
         Name = "ameen"
         terraform = "true"
     }
+}
 
     resource "aws_security_group" "allow_all" {
         name = "allow_all"
-    }
 
     egress {
         from_port = 0
@@ -24,7 +25,7 @@ resource "aws_instance" "terraform" {
         cidr_blocks = ["0.0.0.0/0"]
     }   
 
-    tags = {
+       tags = {
         name = "allow_all"
     }
 }

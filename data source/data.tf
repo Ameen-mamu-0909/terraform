@@ -3,7 +3,7 @@ data "aws_instance" "ameen" {
 }
 
 filter {
-    name = "image_id"
+    name = "ami_id"
     values = ["ami-0236922087fa98b6e"]
 }
 
