@@ -7,7 +7,7 @@ resource "aws_instance" "terraform" {
 }
 
 resource "aws_security_group" "allow_all" {
-   name = var.sg_name
+  name = var.sg_name
 
   egress {
     from_port   = var.egress_from_port
